@@ -40,6 +40,22 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/PracticalTest/PracticalTest/PracticalTest/Views/Item/AddItem.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSXRlbVxBZGRJdGVtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PracticalTest/PracticalTest/PracticalTest/Views/Item/AddPriceChange.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSXRlbVxBZGRQcmljZUNoYW5nZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PracticalTest/PracticalTest/PracticalTest/Views/Item/GetItems.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSXRlbVxHZXRJdGVtcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PracticalTest/PracticalTest/PracticalTest/Views/Item/GetPriceChanges.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSXRlbVxHZXRQcmljZUNoYW5nZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/PracticalTest/PracticalTest/PracticalTest/Pages/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-hrcduoyalt

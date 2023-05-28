@@ -17,7 +17,11 @@ namespace Entities
         public string priceUpate { get; set; } = null!;
 
         public decimal amount { get; set; }
-
+        public DateTime Created { get; set; }
+        public decimal? oldprice { get; set; }
+        public decimal? newprice { get; set; }
+        public decimal? newcost { get; set; }
+        public decimal? oldcost { get; set; }
         public PriceChangeDTO(int itemcode, string increaseDecrease, string priceType, string priceUpate, decimal amount)
         {
             this.itemcode = itemcode;
@@ -27,5 +31,6 @@ namespace Entities
             this.amount = amount;
 
         }
+        public PriceChangeDTO() { }
     }
 }

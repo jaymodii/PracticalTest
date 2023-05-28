@@ -52,5 +52,40 @@ namespace DataAccessLayer.Repositories
                 return errorMessage;
             }
         }
+
+        public List<PriceChangeDTO> ListPriceChanges()
+        {
+            List<PriceChangeDTO> priceChanges = new();
+
+            using (SqlConnection connection = new(connectionString))
+            {
+                connection.Open();
+
+                using SqlCommand command = new("ListPriceChanges", connection);
+                command.CommandType = CommandType.StoredProcedure;
+
+                using SqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    PriceChangeDTO priceChange = new()
+                    {
+                       
+                        itemcode = (int)reader["Itemcode"],
+                        oldcost = (decimal)reader["Oldcost"],
+                        increaseDecrease = (string)reader["Increase_Decrease"],
+                        priceType = (string)reader["PriceType"],
+                        priceUpate = (string)reader["PriceUpdate"],
+                        newcost = (decimal)reader["Newcost"],
+                        oldprice = (decimal)reader["Oldprice"],
+                        newprice = (decimal)reader["Newprice"],
+                        Created = (DateTime)reader["CreateDate"]
+                    };
+
+                    priceChanges.Add(priceChange);
+                }
+            }   
+
+            return priceChanges;
+        }
     }
 }

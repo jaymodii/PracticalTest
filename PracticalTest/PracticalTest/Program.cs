@@ -1,11 +1,24 @@
-var builder = WebApplication.CreateBuilder(args);
+using DataAccessLayer.Interfaces;
+using DataAccessLayer.Repositories;
+using Microsoft.Extensions.Configuration;
+using System.Configuration;
 
-// Add services to the container.
+var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 
+var configuration = new ConfigurationBuilder()
+    .SetBasePath(builder.Environment.ContentRootPath)
+    .AddJsonFile("appsettings.json")
+    .Build();
+
+string connectionString = configuration.GetConnectionString("Data");
+
+
+builder.Services.AddScoped<IItemInterface, ItemRepository>(provider =>
+    new ItemRepository(connectionString));
+builder.Services.AddScoped<IPriceChangeInterface,PriceChangeRepository>(provider =>new PriceChangeRepository(connectionString));
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Error");
